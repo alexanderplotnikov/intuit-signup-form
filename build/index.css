@@ -1,129 +1,236 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+body {
+  font-family: 'Nunito', sans-serif;
+  background: #eceef1;
 }
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
+
+/* Sign in header */
+.member {
+  display: grid;
+  grid-template-columns: repeat(2, 1ft);
+  justify-content: end;
+  align-items: center;
+  height: 40px;
+  padding: 10px 30px;
+  text-align: center;
+}
+.member p,
+a {
+  font-size: 12px;
+  line-height: 1.5;
+}
+.member a {
+  color: #0077c5;
+  cursor: pointer;
+}
+
+.member button {
+  display: flex;
+  place-items: center;
+  grid-column: 2/3;
+  grid-row: 1/3;
+  color: #fff;
+  height: 34px;
+  width: 100px;
+  margin-left: 10px;
+  background-color: #0077c5;
+  border: 1px solid #4c4c4c;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.member button p {
+  margin-right: auto;
+}
+.member img {
+  display: block;
+  height: 14px;
+  margin-left: auto;
+  padding-right: 4px;
+}
+
+.logo {
+  height: 35px;
+  padding: 20px 0;
+}
+.logo div {
+  position: relative;
+  height: 35px;
+  width: 118px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.logo img {
+  position: absolute;
+  top: 0;
+  width: 564px;
+}
+
+/* Sign Up Form */
+
+.form header {
+  margin-bottom: 20px;
+}
+.form header > div {
+  position: relative;
+  height: 28px;
+  width: 318px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.form header > div img {
+  position: absolute;
+  bottom: -1px;
+  width: 564px;
+}
+.form > section {
+  position: relative;
+  height: 640px;
+  width: 378px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #fff;
+  border: 1px solid #c7c7c7;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.form section > header {
+  text-align: center;
+  color: #4c4c4c;
+  font-weight: 400;
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+.form section > header h2 {
   display: block;
 }
-body {
-  line-height: 1;
+.form section > header div {
+  color: #4c4c4c;
+  font-size: 14px;
+  display: block;
+  padding-top: 20px;
+  font-weight: 300;
 }
-ol,
-ul {
-  list-style: none;
+
+.form fieldset {
+  font-size: 14px;
+  color: #404040;
+  height: 95px;
 }
-blockquote,
-q {
-  quotes: none;
+
+.form label {
+  display: block;
+  margin-bottom: 6px;
 }
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
+.form input {
+  width: 316px;
+  height: 32px;
+  padding-left: 8px;
+  padding-right: 6px;
+  border: 1px solid #d8d8d8;
+  border-radius: 3px;
+  box-sizing: border-box;
+  outline: none;
 }
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+
+.form input:focus {
+  -webkit-box-shadow: 0 1px 1px #fff inset, 0 0 8px #52a8ec;
+  box-shadow: 0 1px 1px #fff inset, 0 0 8px #52a8ec;
+  outline: 0 none;
+  border-color: rgba(82, 168, 236, 0.8);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset,
+    0 0 8px rgba(82, 168, 236, 0.6);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset,
+    0 0 8px rgba(82, 168, 236, 0.6);
+}
+.form #phone + span {
+  display: block;
+  margin: 8px 0;
+  font-size: 10px;
+}
+.form form button {
+  display: block;
+  width: 100%;
+  height: 44px;
+  margin-bottom: 30px;
+  padding: 6px 12px;
+  border: none;
+  background: #0077c5;
+  border-radius: 4px;
+}
+
+.form form button {
+  text-shadow: none;
+  color: #fff;
+  font-size: 1.125em;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.75);
+  min-width: 100px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+.form form button:active {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.form footer {
+}
+.form footer div {
+  text-align: center;
+  width: 80%;
+  margin: auto auto;
+  font-style: italic;
+  color: #757575;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.form footer div > span {
+  color: #0077c5;
+  cursor: pointer;
+}
+
+/* captcha disclaimer */
+.captcha {
+  display: flex;
+  place-items: center;
+  position: absolute;
+  background-color: #eceef1;
+  bottom: 0;
+  left: 0;
+  height: 20px;
+  width: calc(100% - 32px);
+  font-size: 10px;
+  padding: 16px;
+  text-align: center;
+}
+.captcha p {
+  margin: 0 auto;
+}
+.captcha span {
+  color: #0077c5;
+  cursor: pointer;
+}
+
+/* Footer style */
+.footer {
+  margin: 0 auto;
+  height: 60px;
+  margin-bottom: 20px;
+  padding: 20px 0;
+  color: #505050;
+  text-align: center;
+  line-height: 1.5;
+}
+.footer ul {
+  margin: auto;
+  color: #0077c5;
+}
+.footer li {
+  display: inline-block;
+  margin: 5px;
+  cursor: pointer;
+}
+.footer li:hover {
+  text-decoration: underline;
+  color: #032e4b;
 }
